@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function findFactorial() {
+                document.getElementById("result").innerHTML = "";
+                var num = document.getElementById("number").value;
+                var fact = 1;
+
+                for (i = 1; i <=num; i++){
+                    fact = fact * i;
+                    document.getElementById("result").insertAdjacentHTML('beforeend', '<br>');
+                    document.getElementById("result").insertAdjacentHTML('beforeend', fact);
+                }
+            }
+
+        
+        </script>
+    <p>Factorial Calculator</p>  
+
+        Enter Number: <input type = "number" id = "number" min = "1" max = "50"><button onclick="findFactorial()">Calculate</button>
+
+        <div id="result"></div>
+    </body>
+</html>
